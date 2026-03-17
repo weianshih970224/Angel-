@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>angel 小野貓</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>angel 小野貓</h1>
+        <p class="instruction">使用鍵盤方向鍵 (↑↓←→) 控制小球躲避掉落物！</p>
+
+        <div id="game-wrapper">
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- 初始開始畫面 -->
+            <div id="start-overlay" class="overlay">
+                <button id="start-btn">開始遊戲</button>
+            </div>
+
+            <!-- 遊戲結束彈窗 -->
+            <div id="game-over-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2 class="game-over-title">GAME OVER</h2>
+                    <div id="love-word" class="love-word"></div>
+                    <button id="restart-btn">再玩一次</button>
+                </div>
+            </div>
+
+            <!-- 升級過關提示彈窗 -->
+            <div id="level-up-modal" class="modal hidden" style="pointer-events: none; z-index: 30; background: rgba(0,0,0,0);">
+                <div class="modal-content" style="background: transparent; border: none; box-shadow: none;">
+                    <h2 class="level-up-title" id="level-up-text">angel 小野貓</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box">得分: <span id="score">0</span></div>
+            <div class="stat-box">等級: <span id="level">1</span></div>
+            <div class="stat-box">下一關: <span id="timer">01:00</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
